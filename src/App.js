@@ -12,6 +12,7 @@ function App() {
   const submit = (e)=>{
     e.preventDefault();
     setMobileName([...mobileName, temp]);
+    document.querySelector("input").value="";
   }
   return (
     <div className="container">
@@ -27,7 +28,7 @@ function App() {
       {/* To add the details in the list */}
       <form>
         <h5>Add new items to the list</h5>
-        <input type='text' onChange={updateList} placeholder='Enter the detail to add in the list'/>
+        <input type='text' onChange={updateList} placeholder='Add mobile name here!!'/>
         <button onClick={submit} type='submit'>Add</button>
       </form>
     </div>
